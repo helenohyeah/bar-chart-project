@@ -1,5 +1,5 @@
 function drawBarChart(data, options, element) {
-
+  
 }
 
 function addElement(element) {
@@ -7,16 +7,32 @@ function addElement(element) {
   canvas.attr('id', 'chart-test');
 }
 
+function drawAxes(data) {
+  let arr = Object.values(data);
+  let chartWidth = arr.length;
+  let chartHeight = Math.max(...arr);
+  console.log(chartWidth); // 3
+  console.log(chartHeight); // 5
+}
+
+
 // TESTING
-let data = [1, 2, 3, 4, 5];
+let data = {
+  label1: 1,
+  label2: 3,
+  label3: 5
+} 
+// bar width depends on amount of values passed (3)
+// bar height depends on values of the data (at least 5)
+
+
 let options = {
-  width: '200px',
-  height: '200px',
-  barColor: 'red'
+  area: [500, 800] // [height, width] DONE VIA CSS FOR NOW
 };
+
 let element = 'div';
 
 addElement(element);
-
+drawAxes(data);
 
 drawBarChart(data, options, element);

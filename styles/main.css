@@ -1,5 +1,14 @@
+body {
+  height: 98vh;
+}
+
+#container {
+  height: 100%;
+}
+
 #chart-test {
-  height: 200px;
-  width: 200px;
+  margin: auto;
+  height: 500px;
+  width: 800px;
   background: red;
 }
